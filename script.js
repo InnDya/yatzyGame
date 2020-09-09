@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let player1Five = document.getElementById("player1Five");
     let player1Six = document.getElementById("player1Six");
     let sumField = document.getElementById("playerOneScore");
+    let bonusField = document.getElementById("bonus");
 
     btnCalc.addEventListener("click", function(e) {
         let sum = 0;
@@ -46,12 +47,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
   
         sumField.innerHTML = sum;
       
-      //let bonus = 0;
-      //if (sum >= 5) {
-        //  bonus = 50;
-      //}
-       // bonusField.innerHTML = bonus;
+        let bonus = 0;
+        if (sum >= 63) {
+            bonus = 50;
+        }
+          bonusField.innerHTML = bonus;
+          
     })
+
 
     //let player1One = parseInt(document.getElementById("player1One").value, 10);
     //let player1Two = parseInt(document.getElementById("player1Two").value, 10);
