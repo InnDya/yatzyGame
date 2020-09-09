@@ -1,0 +1,71 @@
+.darkgray {
+    background-color: darkgray;
+    font-weight: bold;
+    border: solid black;
+    
+}
+
+.lightgray input{
+    background-color: lightgray
+}
+
+.lightgray {
+    background-color: lightgray;
+    font-weight: bold;
+    border: solid black;
+}
+
+input{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 100%;
+    padding: 20px;
+    margin: 0ch;
+    resize: none;
+}
+
+table {
+    border: 3px solid black;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+td input {
+    width: 40px;
+}
+
+
+td:nth-child(even) {
+    background-color: darkgray;    
+}
+
+
+tr:first-child{
+    background-color: lightgray;
+}
+
+tr:last-child{
+    background-color: lightgray;
+}
+
+tr:nth-child(n+8):nth-child(-n+9){
+    background-color: lightgray;
+}
+    
+
+
+
+
+/*tr:nth-child(even) {
+background-color:
+}
+
+tr: nth-child(odd) {
+background-color:
+}
+*/
+
