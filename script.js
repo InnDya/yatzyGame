@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    let btnCalc = document.getElementById("calc");
+    let btnCalc = document.getElementById("calc");              //FÖr att koppla tillsammans html med js
     let player1One = document.getElementById("player1One");
     let player1Two = document.getElementById("player1Two");
     let player1Three = document.getElementById("player1Three");
@@ -17,13 +17,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
       
       tmp = player1One.value;                                   //tmp får input-värdet för ettor. Värdet konverteras
       if (typeof(Number(tmp)) === "number") {                   //från string till number. 
-          sum += Number(tmp);
-      }
-  
+          sum += Number(tmp);                                   //lägg till tmp värdet till summan.
+      }                                                         
+                                                                
       tmp = player1Two.value;
-      if (!isNaN(Number(tmp))) {
+      if (!isNaN(Number(tmp))) {                                // andra typkonverteringsmetod.
           sum += Number(tmp);
       }
+      
       tmp = player1Three.value;
       if (typeof(Number(tmp)) === "number") {
           sum += Number(tmp);
