@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let sumField = document.getElementById("playerOneScore");
     let bonusField = document.getElementById("bonus");
 
-    btnCalc.addEventListener("click", function(e) {
-        let sum = 0;
-      let tmp = 0;
+    btnCalc.addEventListener("click", function(e) {             // 1) Vid click, börjar vi först med 
+        let sum = 0;                                            // att definiera två variabler  
+        let tmp = 0;                                            // som just nu är 0. 
       
-      tmp = player1One.value;
-      if (typeof(Number(tmp)) === "number") {
+      tmp = player1One.value;                                   //tmp får input-värdet för ettor. Värdet konverteras
+      if (typeof(Number(tmp)) === "number") {                   //från string till number. 
           sum += Number(tmp);
       }
   
