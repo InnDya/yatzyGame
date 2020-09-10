@@ -8,13 +8,13 @@ function countDice(dice) {
     for (let current_dice of dice) {
       values[current_dice]++;
     }
-​
+
     let par = false;
     let triss = false;
     let numb1 = 0;
     let numb2 = 0;
-​
-​
+
+
     for (let y = 0; y <= 6; y++){
         if (values[y] === 2){
             par = true;
@@ -25,8 +25,8 @@ function countDice(dice) {
             numb2 = y;
         }
     }
-​
-​
+
+
     if (triss && par){
         console.log("KÅK!! du fick två " + numb1 + " och tre " + numb2);
     }
@@ -36,5 +36,4 @@ function countDice(dice) {
     
   }
   
-  countDice([3, 3, 2, 2, 2]);
-Shared in
+  countDice([2, 2, 2, 3, 3]);
