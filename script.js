@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    let btnCalc = document.getElementById("calc");              //FÖr att koppla tillsammans html med js
     let player1One = document.getElementById("player1One");
     let player1Two = document.getElementById("player1Two");
     let player1Three = document.getElementById("player1Three");
@@ -11,71 +10,96 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let sumField = document.getElementById("playerOneScore");
     let bonusField = document.getElementById("bonus");
 
-    btnCalc.addEventListener("click", function(e) {             // 1) Vid click, börjar vi först med 
-        let sum = 0;                                            // att definiera två variabler  
-        let tmp = 0;                                            // som just nu är 0. 
-      
-      tmp = player1One.value;                                   //tmp får input-värdet för ettor. Värdet konverteras
-      if (typeof(Number(tmp)) === "number") {                   //från string till number. 
-          sum += Number(tmp);                                   //lägg till tmp värdet till summan.
-      }                                                         
-                                                                
-      tmp = player1Two.value;
-      if (!isNaN(Number(tmp))) {                                // andra typkonverteringsmetod.
-          sum += Number(tmp);
-      }
-      
-      tmp = player1Three.value;
-      if (typeof(Number(tmp)) === "number") {
-          sum += Number(tmp);
-      }
-  
-      tmp = player1Four.value;
-      if (!isNaN(Number(tmp))) {
-          sum += Number(tmp);
-      }
-      tmp = player1Five.value;
-      if (typeof(Number(tmp)) === "number") {
-          sum += Number(tmp);
-      }
-  
-      tmp = player1Six.value;
-      if (!isNaN(Number(tmp))) {
-          sum += Number(tmp);
-      }
+    document.getElementById("form").addEventListener("input", function (e) {
+        let sum = 0;
+        let tmp = 0;
 
-      
-  
+        tmp = player1One.value;
+        if (typeof (Number(tmp)) === "number") {
+            sum += Number(tmp);
+        }
+        tmp = player1Two.value;
+        if (!isNaN(Number(tmp))) {
+            sum += Number(tmp);
+        }
+        tmp = player1Three.value;
+        if (typeof (Number(tmp)) === "number") {
+            sum += Number(tmp);
+        }
+        tmp = player1Four.value;
+        if (!isNaN(Number(tmp))) {
+            sum += Number(tmp);
+        }
+        tmp = player1Five.value;
+        if (typeof (Number(tmp)) === "number") {
+            sum += Number(tmp);
+        }
+        tmp = player1Six.value;
+        if (!isNaN(Number(tmp))) {
+            sum += Number(tmp);
+        }
+
         sumField.innerHTML = sum;
-      
+
         let bonus = 0;
         if (sum >= 63) {
             bonus = 50;
         }
-          bonusField.innerHTML = bonus;
-          
+        bonusField.innerHTML = bonus;
+
     })
 
-
-    //let player1One = parseInt(document.getElementById("player1One").value, 10);
-    //let player1Two = parseInt(document.getElementById("player1Two").value, 10);
-    //let player1Three = parseInt(document.getElementById("player1Three").value, 10);
-    //let player1Four = parseInt(document.getElementById("player1Four").value, 10);
-    //let player1Five = parseInt(document.getElementById("player1Five").value, 10);
-    //let player1Six = parseInt(document.getElementById("player1Six").value, 10);
-
-
-
-    //console.log(player1Two);
-
-    //let playerOneScore = player1One + player1Two;
-    //let calc_button = document.getElementById("calc");
-
-    // Ha koll på om någon klickar på beräkna-knappen.
-    //calc_button.addEventListener("click", function (event) {
-        //document.getElementById("playerOneScore").innerHTML = playerOneScore;
-    //})
-
 })
+
+let btnClick = document.getElementById("roll");
+let dice1 = document.getElementById("dice1");
+let dice2 = document.getElementById("dice2");
+let dice3 = document.getElementById("dice3");
+let dice4 = document.getElementById("dice4");
+let dice5 = document.getElementById("dice5");
+let rollsleft = document.getElementById("rollsleft");
+let i = 3;
+let donedice = document.getElementById("donedice");
+
+
+btnClick.addEventListener("click", function (e) {
+    i--
+    if (i <= -1) {
+        rollsleft.innerHTML = "Kast kvar: " + 0;
+        return;
+    }
+    else {
+        rollsleft.innerHTML = "Kast kvar: " + i;
+    }
+
+    if (document.getElementById("box1").checked == false) {
+        var slump = Math.floor(Math.random() * 6) + 1;
+        dice1.src = "Diceimg/" + slump + ".tiff"
+
+    }
+    if (document.getElementById("box2").checked == false) {
+        var slump = Math.floor(Math.random() * 6) + 1;
+        dice2.src = "Diceimg/" + slump + ".tiff"
+
+    }
+    if (document.getElementById("box3").checked == false) {
+        var slump = Math.floor(Math.random() * 6) + 1;
+        dice3.src = "Diceimg/" + slump + ".tiff"
+
+    }
+    if (document.getElementById("box4").checked == false) {
+        var slump = Math.floor(Math.random() * 6) + 1;
+        dice4.src = "Diceimg/" + slump + ".tiff"
+
+    }
+    if (document.getElementById("box5").checked == false) {
+        var slump = Math.floor(Math.random() * 6) + 1;
+        dice5.src = "Diceimg/" + slump + ".tiff"
+
+    }
+
+}
+
+)
 
 
