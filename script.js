@@ -74,27 +74,27 @@ btnClick.addEventListener("click", function (e) {
 
     if (document.getElementById("box1").checked == false) {
         var slump = Math.floor(Math.random() * 6) + 1;
-        dice1.src = "Diceimg/" + slump + ".tiff"
+        dice1.src = "Diceimg/" + slump + ".png"
 
     }
     if (document.getElementById("box2").checked == false) {
         var slump = Math.floor(Math.random() * 6) + 1;
-        dice2.src = "Diceimg/" + slump + ".tiff"
+        dice2.src = "Diceimg/" + slump + ".png"
 
     }
     if (document.getElementById("box3").checked == false) {
         var slump = Math.floor(Math.random() * 6) + 1;
-        dice3.src = "Diceimg/" + slump + ".tiff"
+        dice3.src = "Diceimg/" + slump + ".png"
 
     }
     if (document.getElementById("box4").checked == false) {
         var slump = Math.floor(Math.random() * 6) + 1;
-        dice4.src = "Diceimg/" + slump + ".tiff"
+        dice4.src = "Diceimg/" + slump + ".png"
 
     }
     if (document.getElementById("box5").checked == false) {
         var slump = Math.floor(Math.random() * 6) + 1;
-        dice5.src = "Diceimg/" + slump + ".tiff"
+        dice5.src = "Diceimg/" + slump + ".png"
 
     }
 
