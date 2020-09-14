@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let player1Five = document.getElementById("player1Five");
     let player1Six = document.getElementById("player1Six");
     let sumField = document.getElementById("playerOneScore");
+    let totalSumField = document.getElementById("totalsum");
     let bonusField = document.getElementById("bonus");
 
     document.getElementById("form").addEventListener("input", function (e) {
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             bonus = 50;
         }
         bonusField.innerHTML = bonus;
+        totalSumField.innerHTML = bonus + sum;
 
     })
 
