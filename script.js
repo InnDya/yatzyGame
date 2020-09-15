@@ -79,6 +79,14 @@ btnClick.addEventListener("click", function (e) {
         rollsleft.innerHTML = "Kast kvar: " + i;
     }
 
+    // Viktorias förslag för att bli av med if-satserna på raderna 90-114. 
+    /*  const box = [box1, box2, box3, box4, box5];
+        const checkedBox = box.filter((value, index, array)=>{
+            return value == checked;
+        });
+        console.log(checkedBox);
+    */
+
     if (document.getElementById("box1").checked == false) {
         var slump = Math.floor(Math.random() * 6) + 1;
         dice1.src = "Diceimg/" + slump + ".png"
@@ -108,5 +116,4 @@ btnClick.addEventListener("click", function (e) {
 }
 
 )
-
 
