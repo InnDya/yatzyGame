@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function (e) {
 
     let player1One = document.getElementById("player1One");
@@ -12,32 +11,37 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     document.getElementById("form").addEventListener("input", function (e) {
         let sum = 0;
-        let tmp = 0;
+        let elements = document.querySelectorAll("input[class=player1]");
+        elements.forEach(function(element) {
+            let value = parseInt(element.value);
+            if (!isNaN(value))
+                sum += value;
+        });
 
-        tmp = player1One.value;
-        if (typeof (Number(tmp)) === "number") {
-            sum += Number(tmp);
-        }
-        tmp = player1Two.value;
-        if (!isNaN(Number(tmp))) {
-            sum += Number(tmp);
-        }
-        tmp = player1Three.value;
-        if (typeof (Number(tmp)) === "number") {
-            sum += Number(tmp);
-        }
-        tmp = player1Four.value;
-        if (!isNaN(Number(tmp))) {
-            sum += Number(tmp);
-        }
-        tmp = player1Five.value;
-        if (typeof (Number(tmp)) === "number") {
-            sum += Number(tmp);
-        }
-        tmp = player1Six.value;
-        if (!isNaN(Number(tmp))) {
-            sum += Number(tmp);
-        }
+        // tmp = player1One.value;
+        // if (typeof (Number(tmp)) === "number") {
+        //     sum += Number(tmp);
+        // }
+        // tmp = player1Two.value;
+        // if (!isNaN(Number(tmp))) {
+        //     sum += Number(tmp);
+        // }
+        // tmp = player1Three.value;
+        // if (typeof (Number(tmp)) === "number") {
+        //     sum += Number(tmp);
+        // }
+        // tmp = player1Four.value;
+        // if (!isNaN(Number(tmp))) {
+        //     sum += Number(tmp);
+        // }
+        // tmp = player1Five.value;
+        // if (typeof (Number(tmp)) === "number") {
+        //     sum += Number(tmp);
+        // }
+        // tmp = player1Six.value;
+        // if (!isNaN(Number(tmp))) {
+        //     sum += Number(tmp);
+        // }
 
         sumField.innerHTML = sum;
 
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             bonus = 50;
         }
         bonusField.innerHTML = bonus;
+
 
     })
 
@@ -63,7 +68,7 @@ let donedice = document.getElementById("donedice");
 
 
 btnClick.addEventListener("click", function (e) {
-    i--
+    i--;
     if (i <= -1) {
         rollsleft.innerHTML = "Kast kvar: " + 0;
         return;
