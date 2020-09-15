@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let totalSumField = document.getElementById("totalsum");
     let bonusField = document.getElementById("bonus");
 
-    document.getElementById("form").addEventListener("input", function (e) {
+    document.getElementById("form").addEventListener("input", function (e) {  // Tar inputs för spelare 1 (ettor, tvåor, treor, fyror, femmor, sexor) och summar resultaten in variable sum. 
         let sum = 0;
-        let elements = document.querySelectorAll("input[class=player1]");
-        elements.forEach(function(element) {
-            let value = parseInt(element.value);
-            if (!isNaN(value))
-                sum += value;
+        let elements = document.querySelectorAll("input[class=player1]");     // väljer alla elements som är input och innehåller klass player1. Lägger dom in variabel elements. Elements är en array.
+        elements.forEach(function(element) {                                 // loopar igenom arrayen elements och kör funktionen för varje värde i arrayen. 
+            let value = parseInt(element.value);                            // element.value är innehållet i elementet. Konverterar från string till number, och lägger till värden i variabel value. value är en array. 
+            if (!isNaN(value))                                              // om value är av typ number
+                sum += value;                                               // sum = sum + value. 
         });
 
         // tmp = player1One.value;
