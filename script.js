@@ -88,30 +88,33 @@ btnClick.addEventListener("click", function (e) {
     */
 
     if (document.getElementById("box1").checked == false) {
-        var slump = Math.floor(Math.random() * 6) + 1;
-        dice1.src = "Diceimg/" + slump + ".png"
+        var slump1 = Math.floor(Math.random() * 6) + 1;
+        dice1.src = "Diceimg/" + slump1 + ".png"
 
     }
     if (document.getElementById("box2").checked == false) {
-        var slump = Math.floor(Math.random() * 6) + 1;
-        dice2.src = "Diceimg/" + slump + ".png"
+        var slump2 = Math.floor(Math.random() * 6) + 1;
+        dice2.src = "Diceimg/" + slump2 + ".png"
 
     }
     if (document.getElementById("box3").checked == false) {
-        var slump = Math.floor(Math.random() * 6) + 1;
-        dice3.src = "Diceimg/" + slump + ".png"
+        var slump3 = Math.floor(Math.random() * 6) + 1;
+        dice3.src = "Diceimg/" + slump3 + ".png"
 
     }
     if (document.getElementById("box4").checked == false) {
-        var slump = Math.floor(Math.random() * 6) + 1;
-        dice4.src = "Diceimg/" + slump + ".png"
+        var slump4 = Math.floor(Math.random() * 6) + 1;
+        dice4.src = "Diceimg/" + slump4 + ".png"
 
     }
     if (document.getElementById("box5").checked == false) {
-        var slump = Math.floor(Math.random() * 6) + 1;
-        dice5.src = "Diceimg/" + slump + ".png"
+        var slump5 = Math.floor(Math.random() * 6) + 1;
+        dice5.src = "Diceimg/" + slump5 + ".png"
+
+        console.log(slump1, slump2, slump3, slump4, slump5);
 
     }
+
 
 }
 
