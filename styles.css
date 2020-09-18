@@ -1,101 +1,55 @@
-.darkgray {
-    background-color: darkgray;
-    font-weight: bold;
-    border: solid black;
-    
+div#container {
+    position: relative;
 }
 
-
-.lightgray {
-    background-color: lightgray;
-    font-weight: bold;
-    border: solid black;
-}
-
-td input{
-    background: none;
-    border: none;
-    width: 40px;
-    box-sizing: border-box;
-    height: 25px;
-    font-size: 16px;
-    font-weight: bolder;  
-    
-}
-
-#box1 {
-
-}
-
-
-#form {
-    
-}
-
-
-#diceSim {
-
+form {
     position: absolute;
-    right: 500px;
-    
-    
-
 }
 
-
-
-
-#doneDice {
+div#diceSim {
     position: absolute;
-    right: 500px;
-    padding-top: 10px;
-
+    top: 50px;
+    left: 530px;
 }
 
 table {
-    border: 3px solid black;
     width: 500px;
-    max-width: 450px;
     height: 450px;
+    border-collapse: collapse;
+    border: 1px solid black;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
+caption {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 
-  }
+td {
+    width: 20px;
+}
 
-
-
+tr.section td {
+    background-color: rgb(217, 217, 217);
+}
 
 td:nth-child(even) {
-    background-color: darkgray;    
+    background-color: rgb(166, 166, 166);
 }
 
-
-tr:first-child{
-    background-color: lightgray;
+tr.section td:nth-child(1) {
+    background-color: rgb(128, 128, 128);
+    font-weight: bold;
 }
 
-tr:last-child{
-    background-color: lightgray;
+td input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-tr:nth-child(n+8):nth-child(-n+9){
-    background-color: lightgray;
+#doneDice {
+    padding-top: 10px;
 }
-    
-
-
-
-
-/*tr:nth-child(even) {
-background-color:
-}
-
-tr: nth-child(odd) {
-background-color:
-}
-*/
-
