@@ -1,5 +1,50 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
+    class Game {
+        constructor(nmb_player = 1) {
+            this.nmbPlayers = nmb_player;
+            this.players = [];
+            for (let i = 0; i < nmb_player; i++) {
+                this.players.push(new Player());
+            }
+            
+
+        }
+           
+
+    }
+
+    class Player {
+        constructor() {
+        this.rollsLeft = 3;
+        this.sum = 0;
+        this.totalSum = 0;
+        this.bonus = false;
+        
+       
+        
+         }
+         throws() {
+            
+            let i = 3;
+            i--;
+            if (i <= -1) {
+                rollsleft.innerHTML = "Kast kvar: " + 0;
+                return;
+            }
+            else {
+                rollsleft.innerHTML = "Kast kvar: " + i;
+                  
+            }
+
+         }
+         
+
+    }
+    let game1 = new Game();
+    game1.name = document.getElementById("p1").value
+    console.log(game1);
+
    /* document.addEventListener("change", function(e) {     // when event "change" occurs, do the following:
         for (let player = 1; player <=1; player++) {    // loop through all players (now only player1)
             let elements = document.getElementsByClassName("player" + player + " sum");     // create array, elements with classes "player1 sum":
