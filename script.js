@@ -1,30 +1,28 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    
-    let sumField = document.getElementById("playerOneScore");
-    let totalSumField = document.getElementById("totalsum");
-    let bonusField = document.getElementById("bonus");
+   /* document.addEventListener("change", function(e) {     // when event "change" occurs, do the following:
+        for (let player = 1; player <=1; player++) {    // loop through all players (now only player1)
+            let elements = document.getElementsByClassName("player" + player + " sum");     // create array, elements with classes "player1 sum":
 
-    document.getElementById("form").addEventListener("input", function (e) {  // Tar inputs för spelare 1 (ettor, tvåor, treor, fyror, femmor, sexor) och summar resultaten in variable sum. 
-        let sum = 0;
-        let elements = document.querySelectorAll("input[class=player1]");     // väljer alla elements som är input och innehåller klass player1. Lägger dom in variabel elements. Elements är en array.
-        elements.forEach(function(element) {                                 // loopar igenom arrayen elements och kör funktionen för varje värde i arrayen. 
-            let value = parseInt(element.value);                            // element.value är innehållet i elementet. Konverterar från string till number, och lägger till värden i variabel value. value är en array. 
-            if (!isNaN(value))                                              // om value är av typ number
-                sum += value;                                               // sum = sum + value. 
-        });
+            let sum = 0;
+            let bonus = 0;
 
-        sumField.innerHTML = sum;
+            for (let element of elements) {             // for each element in array elements
+                sum +=element.valueAsNumber;            // put sum + value of element into sum. 
+            }
+            document.getElementById("player" + player + "_sum").value = sum;
 
-        let bonus = 0;
-        if (sum >= 63) {
-            bonus = 50;
-        }
-        bonusField.innerHTML = bonus;
-        totalSumField.innerHTML = bonus + sum;
+        
+            if (sum >= 63) {                             //bonus check
+                bonus = document.getElementById("player" + player+ "_bonus");                                       
+                bonus.value = 50;                       //extra 50 points put to field id="bonus"
+                console.log(bonus.value)
+            }
+                
+            document.getElementById("totalsum").value = sum + bonus; //something odd, check why. Works ok until player gets bonus.
 
-
-    })
+        };
+    }); 
 
 
 
@@ -92,5 +90,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
     
 })
 
-
+ */
 });
