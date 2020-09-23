@@ -9,41 +9,13 @@
 </head>
 
 <body>
-
+    
     <div id="container">
         <form id="form">
-            <table border="1">
-                <caption>YATZY</caption>
-
-    <div id="diceSim">
+        <table border="1">
         
-        <input type="checkbox" class="Checkbox">
-        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
-        <input type="checkbox" class="Checkbox">
-        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
-        <input type="checkbox" class="Checkbox">
-        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
-        <input type="checkbox" class="Checkbox">
-        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
-        <input type="checkbox" class="Checkbox">
-        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"><br>
-        <button type="button" id="roll">Rulla tärningarna</button>
-        <label for="" id="rollsleft">Kast kvar: 3</label>
-
-
-            <div id="donedice">
-                <label for="donedice"></label>
-            </div>
-
-        </div>
-    </div>
-
-
-    <form id="form">
-    <table>
-        
-            <tr class="lightgray">
-                <td class="darkgray">Spelare/player</td>
+            <tr class="section">
+                <td>Spelare/player</td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
@@ -72,7 +44,7 @@
             </tr>
             <tr>
                 <td>Fyra/four</td>
-                <td><input class="player1" type="number" min="0" max="20" step="4" id="player1Four" onclick()></td>
+                <td><input class="player1" type="number" min="0" max="20" step="4" id="player1Four" onclick></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
@@ -91,15 +63,15 @@
                 <td><input type="text"></td>
                 <td><input type="text"></td>
             </tr>
-            <tr class="lightgray">
-                <td class="darkgray">Summa/sum</td>
+            <tr class="section">
+                <td class>Summa/sum</td>
                 <td id="playerOneScore"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
             </tr>
-            <tr class="lightgray">
-                <td class="darkgray">Bonus</td>
+            <tr class="section">
+                <td>Bonus</td>
                 <td id="bonus"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
@@ -168,8 +140,8 @@
                 <td><input type="text"></td>
                 <td><input type="text"></td>
             </tr>
-            <tr class="lightgray">
-                <td class="darkgray">Total</td>
+            <tr class="section">
+                <td>Total</td>
                 <td id = "totalsum"><input type="text"></td>
                 <td><input type="text"></td>
                 <td><input type="text"></td>
@@ -177,8 +149,30 @@
             </tr>
         </table>    ​
     </form>
+    <div id="diceSim">
+        
+        <input type="checkbox" class="Checkbox">
+        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
+        <input type="checkbox" class="Checkbox">
+        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
+        <input type="checkbox" class="Checkbox">
+        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
+        <input type="checkbox" class="Checkbox">
+        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"> <br>
+        <input type="checkbox" class="Checkbox">
+        <img src="Diceimg/animated-dice-gif.gif" alt="" class="dices"><br>
+        <button type="button" id="roll">Rulla tärningarna</button>
+        <label for="" id="rollsleft">Kast kvar: 3</label>
+
+        <div id="donedice">
+            <label for="donedice"></label>
+        </div>
+    </div>    
+
+</div>
     
+
     <script src="script.js"></script>
 </body>
-
+        
 </html>
