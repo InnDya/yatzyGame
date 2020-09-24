@@ -15,5 +15,8 @@ class Player {
 
     refresh() {
         this.dice.refresh();
+        
+
+        
     }
 }

@@ -32,10 +32,19 @@ class Game {
              // Update bonus in the form
              var bonus_field = document.querySelector(".bonus .player" + player);
              bonus_field.innerHTML = bonus;
-            
-             // Update total sum in the form
+             
+
+            let Otherfields = document.querySelectorAll(".player" + player + ".part_total");
+             let totalsum = 0;
+
+            for (let OtherField of Otherfields) {
+                if (!isNaN(Number(OtherField.valueAsNumber))) {
+                    totalsum += Number(OtherField.valueAsNumber);         
+                }
+            }
             let totalSum_field = document.querySelector(".totalsum .player" + player);
-            totalSum_field.innerHTML = sum + bonus;  
+            totalSum_field.innerHTML = totalsum + bonus + sum;  
+
         }
     }
     
