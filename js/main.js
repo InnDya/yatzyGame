@@ -31,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPlayer++;
         if (currentPlayer == playersCount) {
             currentPlayer = 0;
+            for (let player of players) {
+                player.newRound();
+            }
         }
         let player = players[currentPlayer];
         player.refresh();
