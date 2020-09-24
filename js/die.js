@@ -16,9 +16,10 @@ class Die {
                 var dice = dices[y];
                 
                 rollDice(dice); 
-        
+            }
 
-     }
+        }
+    }
 
 
 

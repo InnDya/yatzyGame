@@ -36,9 +36,7 @@ class Game {
 
             
 
-            //let totalSum_field = document.querySelector(".totalsum .player" + player);
-            //totalSum_field.innerHTML = sum + bonus_field;
-            //console.log(totalSum_field);
+            
         }
     }
     
