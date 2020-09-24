@@ -1,7 +1,7 @@
 class Player {
     constructor (id) {
         this.dice = new Dice();
-        this.id = id;
+        this.id = id;           
         this.rollsleft = 3;
     }
 
