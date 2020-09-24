@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let game = new Game();
     let dice = new Dice();
 
-    let btnThrowDice = document.getElementById("btnThrowDice");
+    let btnThrowDice = document.getElementById("roll");
     btnThrowDice.addEventListener("click", function () {
         dice.throw();
     })

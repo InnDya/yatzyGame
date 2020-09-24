@@ -4,7 +4,7 @@ class Dice {
         this.dice_values = new Array(7).fill(0);
 
         for (let i = 0; i < size; i++) {
-            this.dice.push(new Die("dice_" + (i + 1)));
+            this.dice.push(new Die("dice" + (i + 1)));
         }
 
         this.calculateDiceValues();
