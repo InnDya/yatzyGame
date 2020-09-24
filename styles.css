@@ -6,7 +6,9 @@ form {
     position: absolute;
 }
 
-div#diceSim {
+
+
+div.dice {
     position: absolute;
     top: 50px;
     left: 530px;
