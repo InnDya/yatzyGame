@@ -1,14 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     let game = new Game();
-    let dice = new Dice();
-    let player = new Player();
+    let playersCount = 2;
+    let players = [];
+    for (let i = 0; i < playersCount; i++) {
+        players.push(new Player(i+1));
+    }
+    let currentPlayer = 0;
 
     let btnThrowDice = document.getElementById("btnThrowDice");
     btnThrowDice.addEventListener("click", function () {
-          player.rollsLeft();
-        if (player.rollsleft >= 0) {
-            dice.throw();
-            document.getElementById("rollsleft").innerHTML = "Kast kvar: " + player.rollsleft;
+        let player = players[currentPlayer];
+        if (player.throwsLeft() > 0) {
+            player.throw();
+            document.getElementById("rollsleft").innerHTML = "Kast kvar: " + player.throwsLeft();
         }
         
     })
@@ -16,13 +20,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let btnCalc = document.getElementById("btnCalc");
     btnCalc.addEventListener("click", function () {
         game.partSum();
-    
     })
 
     let btnChangePlayer = document.getElementById("changePlayer");
     btnChangePlayer.addEventListener("click", function () {
-        player.nextPlayer();
-        document.getElementById("player").innerHTML = "Spelare" + player.changePlayer;
-
+        const checkBoxes = document.querySelectorAll('input[type=checkbox]');
+        for (let checkBox of checkBoxes)
+            checkBox.checked = false;
+        currentPlayer++;
+        if (currentPlayer == playersCount) {
+            currentPlayer = 0;
+        }
+        let player = players[currentPlayer];
+        player.refresh();
+        document.getElementById("player").innerHTML = "Spelare" + player.id;
+        document.getElementById("rollsleft").innerHTML = "Kast kvar: " + player.throwsLeft();
     })
 })
