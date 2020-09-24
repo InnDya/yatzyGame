@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    //2 players,
     let game = new Game();
     let playersCount = 2;
     let players = [];
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let btnCalc = document.getElementById("btnCalc");
     btnCalc.addEventListener("click", function () {
-        game.partSum();
+        game.allSums();
     })
 
     let btnChangePlayer = document.getElementById("changePlayer");

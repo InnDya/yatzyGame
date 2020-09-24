@@ -1,11 +1,11 @@
 class Dice {
-    constructor(size = 5) {
+    constructor(size = 5) {         
         this.throwsLeft = 3;
         this.dice = [];
 
-        for (let i = 0; i < size; i++) {
-            this.dice.push(new Die("dice" + (i + 1)));
-        }
+        for (let i = 0; i < size; i++) {                   //loops through the empty array
+            this.dice.push(new Die("dice" + (i + 1)));   //for each index in array a new Die with random value is created
+        }                                                //"dice1", "dice2"..."dice5"
     }
 
     throw() {
