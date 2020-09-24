@@ -10,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let btnCalc = document.getElementById("btnCalc");
     btnCalc.addEventListener("click", function () {
         game.partSum();
+    
     })
 })
