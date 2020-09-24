@@ -9,76 +9,76 @@
 </head>
 
 <body>
-    
+    <button type="button" id="btnCalc">Beräkna</button> <br>
     <div id="container">
         <form id="form">
         <table border="1">
         
-
+            
         <div id="donedice">
             <label for="donedice"></label>
         </div>
     </div>    
                 <tr class="section">
                     <td>Spelare/Player</td>
-                    <td><input type="text" id="p1" value="sebbe"></td>
+                    <td><input type="text" id="p1"></td>
                     <td><input type="text" id="p2"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td>Ettor/Ones</td>
-                    <td><input class="player1 sum" type="number" min="0" max="5" step="1" value="0"></td>
-                    <td><input type="text"></td>
+                    <td><input class="player1 part_sum" type="number" min="0" max="5" step="1" value="0"></td>
+                    <td><input class="player2 part_sum" type="number" min="0" max="5" step="1" value="0"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td>Tvåor/Twos</td>
-                    <td><input class="player1 sum" type="number" max="10" min="0" step="2" value="0"></td>
-                    <td><input type="text"></td>
+                    <td><input class="player1 part_sum" type="number" max="10" min="0" step="2" value="0"></td>
+                    <td><input class="player2 part_sum" type="number" max="10" min="0" step="2" value="0"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td>Treor/Threes</td>
-                    <td><input class="player1 sum" type="number" min="0" max="15" step="3" value="0"></td>
-                    <td><input type="text"></td>
+                    <td><input class="player1 part_sum" type="number" min="0" max="15" step="3" value="0"></td>
+                    <td><input class="player2 part_sum" type="number" min="0" max="15" step="3" value="0"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td>Fyror/Fours</td>
-                    <td><input class="player1 sum" type="number" min="0" max="20" step="4" value="0"></td>
-                    <td><input type="text"></td>
+                    <td><input class="player1 part_sum" type="number" min="0" max="20" step="4" value="0"></td>
+                    <td><input class="player2 part_sum" type="number" min="0" max="20" step="4" value="0"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td>Femmor/Fives</td>
-                    <td><input class="player1 sum" type="number" min="0" max="25" step="5" value="0"></td>
-                    <td><input type="text"></td>
+                    <td><input class="player1 part_sum" type="number" min="0" max="25" step="5" value="0"></td>
+                    <td><input class="player2 part_sum" type="number" min="0" max="25" step="5" value="0"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
                     <td>Sixor/Sixes</td>
-                    <td><input class="player1 sum" type="number" min="0" max="30" step="6" value="0"></td>
-                    <td><input type="text"></td>
+                    <td><input class="player1 part_sum" type="number" min="0" max="30" step="6" value="0"></td>
+                    <td><input class="player2 part_sum" type="number" min="0" max="30" step="6" value="0"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
-                <tr class="section">
+                <tr class="section sum1">
                     <td>Summa/sum</td>
-                    <td><input type="number" id="player1_sum"></td>
-                    <td><input type="text"></td>
+                    <td class="player1"></td>
+                    <td class="player2"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
-                <tr class="section">
+                <tr class="section bonus">
                     <td>Bonus</td>
-                    <td><input type="number" id="player1_bonus" value="0"></td>
-                    <td><input type="text"></td>
+                    <td class="player1"></td>
+                    <td class="player2"></td>
                     <td><input type="text"></td>
                     <td><input type="text"></td>
                 </tr>
@@ -171,7 +171,10 @@
 </div>
     
 
-    <script src="script.js"></script>
+    <script src="game.js"></script>
+    <script src="dice.js"></script>
+    <script src="die.js"></script>
+    <script src="main.js"></script>
 </body>
         
 </html>

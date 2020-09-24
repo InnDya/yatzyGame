@@ -1,4 +1,66 @@
-document.addEventListener("DOMContentLoaded", function (e) {
+class Dice {
+
+    constructor() {
+        this.hold = false;
+        this.value = 0;    
+    }
+
+    checked (value) {
+        this.hold = value;
+    }
+
+    roll () {
+        if (!this.hold) {
+            this.value = Math.floor(Math.random() * 6) + 1;
+        }
+         
+    }
+
+    getValue (){
+        return this.value
+    }
+}
+
+var dice1 = new Dice();
+var dice2= new Dice();
+var dice3 = new Dice();
+var dice4 = new Dice();
+var dice5= new Dice();
+
+dice1.roll();
+var ele = document.querySelector("#dice1");
+
+ele.src = "Diceimg/" + dice1.getValue() + ".png";
+
+for (let i = 0; i < dice.length; i++)
+    dice[i] = new Die ("dice_" + (i + 1))
+/*document.addEventListener("DOMContentLoaded", function (e) {
+
+    - gör class för alla player1 inputfält. 
+    class Dice {
+
+        constructor() {
+            this.hold = false;
+            this.value = 0;    
+        }
+
+        checked (value) {
+            this.hold = value;
+        }
+
+        roll () {
+            if (!this.hold) {
+                this.value = Math.floor(Math.random() * 6) + 1;
+            }
+             
+        }
+
+        getValue (){
+            return this.value
+        }
+    }
+    debugger
+    let dice1 = new Dice()
 
     class Game {
         constructor(nmb_player = 1) {
@@ -7,19 +69,28 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let i = 0; i < nmb_player; i++) {
                 this.players.push(new Player());
             }
+
+        }  
+        playersTurn() {
+            if (player1.rollsLeft === 0) {
+            } 
+            if (player2.rollsLeft === 0) {
+                return this; 
+            }
             
 
         }
-           
 
     }
+    
 
     class Player {
         constructor() {
-        this.rollsLeft = 3;
+        this.rollsLeft = 0;
         this.sum = 0;
         this.totalSum = 0;
         this.bonus = false;
+        this.name = name; 
         
        
         
@@ -41,9 +112,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
          
 
     }
-    let game1 = new Game();
-    game1.name = document.getElementById("p1").value
-    console.log(game1);
+
+
+   let player1 = new Player();
+   player1 = document.getElementById("p1");
+   let player2 = new Player();
+   player2 = document.getElementById("p2")
+   console.log(player1);
 
    /* document.addEventListener("change", function(e) {     // when event "change" occurs, do the following:
         for (let player = 1; player <=1; player++) {    // loop through all players (now only player1)
@@ -135,5 +210,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
     
 })
 
- */
-});
+ 
+});*/
