@@ -1,8 +1,7 @@
 class Player {
     constructor (id) {
         this.dice = new Dice();
-        this.id = id;           
-        this.rollsleft = 3;
+        this.id = id;
     }
 
     throw() {
@@ -15,5 +14,9 @@ class Player {
 
     refresh() {
         this.dice.refresh();
+    }
+
+    newRound() {
+        this.dice = new Dice();
     }
 }

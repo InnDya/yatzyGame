@@ -4,7 +4,7 @@ class Dice {
         this.dice = [];
 
         for (let i = 0; i < size; i++) {                   //loops through the empty array
-            this.dice.push(new Die("dice" + (i + 1)));   //for each index in array a new Die with random value is created
+            this.dice.push(new Die("dice" + (i + 1)));   //for each index in array a new Die is created
         }                                                //"dice1", "dice2"..."dice5"
     }
 
@@ -26,5 +26,4 @@ class Dice {
             die.refresh();                          // for each die do refresh
         }
     }
-
 }

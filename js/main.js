@@ -35,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (currentPlayer == playersCount) {                                //Holds current player as 0 or 1.
             currentPlayer = 0;
+            for (let player of players) {
+                player.newRound();
+            }
         }
         let player = players[currentPlayer];                //Chooses which player to refresh
         player.refresh();
