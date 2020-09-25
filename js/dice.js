@@ -24,7 +24,7 @@ class Dice {
     refresh() {                                         
         for (let die of this.dice) {                //for each die in array dice
             die.refresh();
-            this.throwsLeft = 3;                       // for each die do refresh
+                                 // for each die do refresh
         }
     }
 }
